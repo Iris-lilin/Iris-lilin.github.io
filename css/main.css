@@ -971,7 +971,7 @@ pre .javascript .function {
   bottom: 30px;
 }
 .header {
-  background: url("../image/background.jpg");
+  background: url("http://omjmj6huk.bkt.clouddn.com/background.jpg");
 }
 .header-inner {
   position: relative;
@@ -1699,7 +1699,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #e83cf6;
+  background: #8eec78;
 }
 .links-of-blogroll {
   font-size: 13px;
