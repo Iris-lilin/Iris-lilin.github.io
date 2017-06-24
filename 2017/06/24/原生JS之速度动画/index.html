@@ -89,8 +89,7 @@
 
 
 
-<meta name="description" content="样式代码
-body,div,span{
+<meta name="description" content="样式代码body,div,span{
     margin: 0;
     padding: 0;
 }
@@ -104,13 +103,12 @@ body,div,span{
 }
 
 #div1 span{
-    width: 5">
+    width: 50">
 <meta property="og:type" content="article">
 <meta property="og:title" content="原生JS速度动画">
 <meta property="og:url" content="https://Iris-lilin.github.io/2017/06/24/原生JS之速度动画/index.html">
 <meta property="og:site_name" content="lilin'blog">
-<meta property="og:description" content="样式代码
-body,div,span{
+<meta property="og:description" content="样式代码body,div,span{
     margin: 0;
     padding: 0;
 }
@@ -124,14 +122,13 @@ body,div,span{
 }
 
 #div1 span{
-    width: 5">
+    width: 50">
 <meta property="og:image" content="https://ojlty2hua.qnssl.com/image-1498304589950-MXEuUE5H.PNG?imageView2/0/q/75|imageslim">
 <meta property="og:image" content="https://ojlty2hua.qnssl.com/image-1498305084232-MjIuUE5H.PNG?imageView2/0/q/75|imageslim">
-<meta property="og:updated_time" content="2017-06-24T12:23:05.571Z">
+<meta property="og:updated_time" content="2017-06-24T14:01:44.603Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="原生JS速度动画">
-<meta name="twitter:description" content="样式代码
-body,div,span{
+<meta name="twitter:description" content="样式代码body,div,span{
     margin: 0;
     padding: 0;
 }
@@ -145,7 +142,7 @@ body,div,span{
 }
 
 #div1 span{
-    width: 5">
+    width: 50">
 <meta name="twitter:image" content="https://ojlty2hua.qnssl.com/image-1498304589950-MXEuUE5H.PNG?imageView2/0/q/75|imageslim">
 
 
@@ -423,8 +420,7 @@ body,div,span{
       
 
       
-        <p>样式代码</p>
-<pre><code>body,div,span{
+        <h2 id="样式代码"><a href="#样式代码" class="headerlink" title="样式代码"></a>样式代码</h2><pre><code>body,div,span{
     margin: 0;
     padding: 0;
 }
@@ -480,7 +476,7 @@ function endMove(){
     },30)
 }
 </code></pre><p>实现效果如图：</p>
-<p>初始化left=-200时<br><img src="https://ojlty2hua.qnssl.com/image-1498304589950-MXEuUE5H.PNG?imageView2/0/q/75|imageslim" width="400" height="200"></p>
+<p>初始化left=-200时<br><img src="https://ojlty2hua.qnssl.com/image-1498304589950-MXEuUE5H.PNG?imageView2/0/q/75|imageslim" width="400" height="150"></p>
 <p>当left&lt;0时一直增大left，图为left=0的情况</p>
 <p><img src="https://ojlty2hua.qnssl.com/image-1498305084232-MjIuUE5H.PNG?imageView2/0/q/75|imageslim" width="400" height="200"></p>
 <h2 id="遇到的坑"><a href="#遇到的坑" class="headerlink" title="遇到的坑"></a>遇到的坑</h2><ol>
@@ -500,18 +496,44 @@ window.onload=function(){
 }
 
     var timer=null;
-    function move(target,num){
+    function move(target,speed){
         clearInterval(timer);
         var obj=document.getElementById(&quot;div1&quot;);
         timer=setInterval(function(){
         if (obj.offsetLeft==target) {
             clearInterval(timer);
         }else{
-            obj.style.left=obj.offsetLeft+num+&quot;px&quot;;
+            obj.style.left=obj.offsetLeft+speed+&quot;px&quot;;
             }
         },30)
     }
-</code></pre>
+</code></pre><p>目前是传两个参数，而参数当然是越少越好，故再次精简如下：</p>
+<pre><code>var timer=null;
+function move(target){
+    clearInterval(timer);
+    var obj=document.getElementById(&quot;div1&quot;);
+    timer=setInterval(function(){
+        var speed=0;
+        if(obj.offsetLeft&lt;target){
+                speed=10;
+        }else{
+            speed=-10;
+        }
+        if (obj.offsetLeft==target) {
+            clearInterval(timer);
+         }else{
+             obj.style.left=obj.offsetLeft+speed+&quot;px&quot;;
+         }
+     },30)
+}
+</code></pre><p>##小结  ##</p>
+<ol>
+<li>明确分析出物体属于何种运动类型；</li>
+<li>实现匀速运动的关键点是采用定时器 setInnterval();</li>
+<li>清空定时器 clearInterval() 的使用；</li>
+<li>注意物体css需设置position，及left 、top，其是实现左、右、上、下运动必不可少的。<h2 id=""><a href="#" class="headerlink" title="#"></a>#</h2></li>
+</ol>
+
       
     </div>
 
@@ -556,6 +578,10 @@ window.onload=function(){
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/06/24/原生JS之透明度动画/" rel="prev" title="原生JS之透明度动画">
+                原生JS之透明度动画 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -627,7 +653,7 @@ window.onload=function(){
           
             <div class="site-state-item site-state-posts">
               <a href="/">
-                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-count">7</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -645,7 +671,7 @@ window.onload=function(){
           
             <div class="site-state-item site-state-tags">
               
-                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-count">4</span>
                 <span class="site-state-item-name">标签</span>
               
             </div>
@@ -709,7 +735,7 @@ window.onload=function(){
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#遇到的坑"><span class="nav-number">1.</span> <span class="nav-text">遇到的坑</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#精简版代码"><span class="nav-number">2.</span> <span class="nav-text">精简版代码</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#样式代码"><span class="nav-number">1.</span> <span class="nav-text">样式代码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#遇到的坑"><span class="nav-number">2.</span> <span class="nav-text">遇到的坑</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#精简版代码"><span class="nav-number">3.</span> <span class="nav-text">精简版代码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#"><span class="nav-number">4.</span> <span class="nav-text">#</span></a></li></ol></div>
             
 
           </div>
