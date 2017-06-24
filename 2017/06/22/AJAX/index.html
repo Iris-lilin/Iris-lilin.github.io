@@ -89,15 +89,22 @@
 
 
 
-<meta name="description" content="learn more">
-<meta property="og:type" content="website">
-<meta property="og:title" content="lilin'blog">
-<meta property="og:url" content="https://Iris-lilin.github.io/tags/写作/index.html">
+<meta name="description" content="#前言总括：本文讲解了ajax的历史，工作原理以及优缺点，对XMLHttpRequest对象进行了详细的讲解，并使用原生js实现了一个ajax对象以方便日常开始使用。
+#正文
+##Ajax简介##&amp;emsp;&amp;emsp;在上世纪90年代，几乎所有的网站都由HTML页面实现，服务器处理每一个用户请求都需要重新加载网页。形式是怎样的呢？就比如说你在浏览器上登录自己的微博账号，填完了表单，点击登录按钮，">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ajax入门篇">
+<meta property="og:url" content="https://Iris-lilin.github.io/2017/06/22/AJAX/index.html">
 <meta property="og:site_name" content="lilin'blog">
-<meta property="og:description" content="learn more">
+<meta property="og:description" content="#前言总括：本文讲解了ajax的历史，工作原理以及优缺点，对XMLHttpRequest对象进行了详细的讲解，并使用原生js实现了一个ajax对象以方便日常开始使用。
+#正文
+##Ajax简介##&amp;emsp;&amp;emsp;在上世纪90年代，几乎所有的网站都由HTML页面实现，服务器处理每一个用户请求都需要重新加载网页。形式是怎样的呢？就比如说你在浏览器上登录自己的微博账号，填完了表单，点击登录按钮，">
+<meta property="og:updated_time" content="2017-06-22T04:32:28.791Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="lilin'blog">
-<meta name="twitter:description" content="learn more">
+<meta name="twitter:title" content="ajax入门篇">
+<meta name="twitter:description" content="#前言总括：本文讲解了ajax的历史，工作原理以及优缺点，对XMLHttpRequest对象进行了详细的讲解，并使用原生js实现了一个ajax对象以方便日常开始使用。
+#正文
+##Ajax简介##&amp;emsp;&amp;emsp;在上世纪90年代，几乎所有的网站都由HTML页面实现，服务器处理每一个用户请求都需要重新加载网页。形式是怎样的呢？就比如说你在浏览器上登录自己的微博账号，填完了表单，点击登录按钮，">
 
 
 
@@ -125,13 +132,13 @@
 
 
 
-  <link rel="canonical" href="https://Iris-lilin.github.io/tags/写作/"/>
+  <link rel="canonical" href="https://Iris-lilin.github.io/2017/06/22/AJAX/"/>
 
 
 
 
 
-  <title> 标签: 写作 | lilin'blog </title>
+  <title> ajax入门篇 | lilin'blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -156,7 +163,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left  ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -270,46 +277,166 @@
           <div id="content" class="content">
             
 
-  <div id="posts" class="posts-collapse">
-    <div class="collection-title">
-      <h2 >
-        写作
-        <small>标签</small>
-      </h2>
-    </div>
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="https://Iris-lilin.github.io/2017/06/22/AJAX/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Iris-lilin">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://omjmj6huk.bkt.clouddn.com/new.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="lilin'blog">
+    </span>
 
     
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                ajax入门篇
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-22T09:46:12+08:00">
+                2017-06-22
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
       
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+      
+        <p>#前言<br><strong>总括：</strong>本文讲解了ajax的历史，工作原理以及优缺点，对XMLHttpRequest对象进行了详细的讲解，并使用原生js实现了一个ajax对象以方便日常开始使用。</p>
+<p>#正文</p>
+<p>##Ajax简介##<br>&emsp;&emsp;在上世纪90年代，几乎所有的网站都由HTML页面实现，服务器处理每一个用户请求都需要重新加载网页。形式是怎样的呢？就比如说你在浏览器上登录自己的微博账号，填完了表单，点击登录按钮，一次”完整”的HTTP请求就此触发，服务器发现你的登录密码不对头，立马把网页原原本本的返回给你，在用户看来呢，就是一次重新加载的过程！用户体验极差！而且这个做法浪费了许多带宽，因为在前后两个页面中的大部分HTML码往往是相同的。由于每次应用的沟通都需要向服务器发送请求，应用的回应时间依赖于服务器的回应时间。这导致了用户界面的回应比本机应用慢得多。</p>
+<p>&emsp;&emsp;到了2005年，google率先在它的应用(诸如google地图、gmail)里使用了ajax技术，这才让这项技术正式风靡开来。</p>
+<h2 id="Ajax工作原理"><a href="#Ajax工作原理" class="headerlink" title="Ajax工作原理"></a>Ajax工作原理</h2><p>&emsp;&emsp;Ajax的工作原理相当于在用户和服务器之间加了一个中间层(ajax引擎),使用户操作与服务器响应异步化。并不是所有的用户请求都提交给服务器,像—些数据验证(比如判断用户是否输入了数据)和数据处理(比如判断用户输入数据是否是数字)等都交给Ajax引擎自己来做, 只有确定需要从服务器读取新数据时再由Ajax引擎代为向服务器提交请求。把这些交给了Ajax引擎，用户操作起来也就感觉更加流畅了。</p>
+<h2 id="Ajax优缺点"><a href="#Ajax优缺点" class="headerlink" title="Ajax优缺点"></a>Ajax优缺点</h2><p>###Ajax优点###</p>
+<ol>
+<li>无刷新更新数据</li>
+<li>异步与服务器通信</li>
+<li>前端与后端负载平衡</li>
+<li>基于标准被广泛支持</li>
+<li>界面与应用分离<br>###Ajax缺点###</li>
+<li>Ajax干掉了Back和加入收藏书签功能，即对浏览器机制的破坏</li>
+<li>Ajax的安全问题</li>
+<li>因为网络延迟需要给用户提供必要提示<h2 id="XMLHttpRequest介绍"><a href="#XMLHttpRequest介绍" class="headerlink" title="XMLHttpRequest介绍"></a>XMLHttpRequest介绍</h2>&emsp;&emsp;Ajax(Asynchronous JavaScript and XML)不是指一种单一的技术，而是有机地利用了一系列相关的技术。虽然其名称包含XML，但实际上数据格式可以由JSON代替，进一步减少数据量，形成所谓的AJAJ。为了使用JavaScript向服务器发出 HTTP 请求，需要一个提供此功能的类的实例。这就是XMLHttpRequest（以下简称XHR)的由来。这样的类最初是在Internet Explorer中作为一个名为XMLHTTP的ActiveX对象引入的。然后，Mozilla，Safari和其他浏览器，实现一个XHR类，支持Microsoft的原始ActiveX对象的方法和属性。同时微软也实现了XHR。<br>###XHR属性<br><em>onreadystatechange</em></li>
+</ol>
+<p>一个JavaScript函数对象，当readyState属性改变时会调用它。回调函数会在user interface线程中调用</p>
+<p><em>readyState</em></p>
+<p>HTTP 请求的状态.当一个 XMLHttpRequest 初次创建时，这个属性的值从 0 开始，直到接收到完整的 HTTP 响应，这个值增加到 4。</p>
 
-      <h1 class="post-title">
+      
+    </div>
+
+    <div>
+      
         
-            <a class="post-title-link" href="/2017/03/16/我的高考复习经验之谈/" itemprop="url">
-              
-                <span itemprop="name">我的高考复习经验之谈</span>
-              
-            </a>
+
+      
+    </div>
+
+    <div>
+      
         
-      </h1>
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-03-16T22:02:38+08:00"
-              content="2017-03-16" >
-          03-16
-        </time>
-      </div>
+      
+    </div>
 
-    </header>
+
+    <footer class="post-footer">
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/06/17/URL-URI/" rel="next" title="URI-URL-URN">
+                <i class="fa fa-chevron-left"></i> URI-URL-URN
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/06/24/j简单动画/" rel="prev" title="">
+                 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </article>
 
 
-    
-  </div>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
           
           </div>
@@ -317,6 +444,10 @@
 
 
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
         
@@ -336,8 +467,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="http://omjmj6huk.bkt.clouddn.com/new.jpg"
@@ -424,6 +564,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Ajax工作原理"><span class="nav-number">1.</span> <span class="nav-text">Ajax工作原理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Ajax优缺点"><span class="nav-number">2.</span> <span class="nav-text">Ajax优缺点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#XMLHttpRequest介绍"><span class="nav-number">3.</span> <span class="nav-text">XMLHttpRequest介绍</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -535,6 +691,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
 
   
 
