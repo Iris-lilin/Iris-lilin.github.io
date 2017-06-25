@@ -73,7 +73,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="study," />
+  <meta name="keywords" content="缓冲动画 取整," />
 
 
 
@@ -89,61 +89,21 @@
 
 
 
-<meta name="description" content="样式代码body,div,span{
-    margin: 0;
-    padding: 0;
-}
-#div1{
-    width: 200px;
-    height: 200px;
-    background: red;
-    position: relative;  
-    left: -200px;
-    top:0;
-}
-
-#div1 span{
-    width: 50">
+<meta name="description" content="缓冲动画&amp;emsp;&amp;emsp;当距离目的地很远时速度很大，随着距离的减小速度也减小，可以得到速度与距离成正比，假设目标值为target，当前值为obj.offsetLeft,则初步得到speed=target-obj.offsetLeft，测试发现，速度太快了，故speed=（target-obj.offsetLeft）/10；再次测试，发现宏观上好像达到了期望的效果，然而仔细观察打开控制太后发">
 <meta property="og:type" content="article">
-<meta property="og:title" content="原生JS速度动画">
-<meta property="og:url" content="https://Iris-lilin.github.io/2017/06/24/原生JS之速度动画/index.html">
+<meta property="og:title" content="原生JS之缓冲动画">
+<meta property="og:url" content="https://Iris-lilin.github.io/2017/06/25/原生JS之缓冲动画/index.html">
 <meta property="og:site_name" content="lilin'blog">
-<meta property="og:description" content="样式代码body,div,span{
-    margin: 0;
-    padding: 0;
-}
-#div1{
-    width: 200px;
-    height: 200px;
-    background: red;
-    position: relative;  
-    left: -200px;
-    top:0;
-}
-
-#div1 span{
-    width: 50">
-<meta property="og:image" content="https://ojlty2hua.qnssl.com/image-1498304589950-MXEuUE5H.PNG?imageView2/0/q/75|imageslim">
-<meta property="og:image" content="https://ojlty2hua.qnssl.com/image-1498305084232-MjIuUE5H.PNG?imageView2/0/q/75|imageslim">
-<meta property="og:updated_time" content="2017-06-24T14:01:44.603Z">
+<meta property="og:description" content="缓冲动画&amp;emsp;&amp;emsp;当距离目的地很远时速度很大，随着距离的减小速度也减小，可以得到速度与距离成正比，假设目标值为target，当前值为obj.offsetLeft,则初步得到speed=target-obj.offsetLeft，测试发现，速度太快了，故speed=（target-obj.offsetLeft）/10；再次测试，发现宏观上好像达到了期望的效果，然而仔细观察打开控制太后发">
+<meta property="og:image" content="https://ojlty2hua.qnssl.com/image-1498358595672-My5QTkc=.PNG?imageView2/0/q/75|imageslim">
+<meta property="og:image" content="https://ojlty2hua.qnssl.com/image-1498358653591-NC5QTkc=.PNG?imageView2/0/q/75|imageslim">
+<meta property="og:image" content="https://ojlty2hua.qnssl.com/image-1498359428806-MS5QTkc=.PNG?imageView2/0/q/75|imageslim">
+<meta property="og:image" content="https://ojlty2hua.qnssl.com/image-1498359463831-Mi5QTkc=.PNG?imageView2/0/q/75|imageslim">
+<meta property="og:updated_time" content="2017-06-25T03:01:51.365Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="原生JS速度动画">
-<meta name="twitter:description" content="样式代码body,div,span{
-    margin: 0;
-    padding: 0;
-}
-#div1{
-    width: 200px;
-    height: 200px;
-    background: red;
-    position: relative;  
-    left: -200px;
-    top:0;
-}
-
-#div1 span{
-    width: 50">
-<meta name="twitter:image" content="https://ojlty2hua.qnssl.com/image-1498304589950-MXEuUE5H.PNG?imageView2/0/q/75|imageslim">
+<meta name="twitter:title" content="原生JS之缓冲动画">
+<meta name="twitter:description" content="缓冲动画&amp;emsp;&amp;emsp;当距离目的地很远时速度很大，随着距离的减小速度也减小，可以得到速度与距离成正比，假设目标值为target，当前值为obj.offsetLeft,则初步得到speed=target-obj.offsetLeft，测试发现，速度太快了，故speed=（target-obj.offsetLeft）/10；再次测试，发现宏观上好像达到了期望的效果，然而仔细观察打开控制太后发">
+<meta name="twitter:image" content="https://ojlty2hua.qnssl.com/image-1498358595672-My5QTkc=.PNG?imageView2/0/q/75|imageslim">
 
 
 
@@ -171,13 +131,13 @@
 
 
 
-  <link rel="canonical" href="https://Iris-lilin.github.io/2017/06/24/原生JS之速度动画/"/>
+  <link rel="canonical" href="https://Iris-lilin.github.io/2017/06/25/原生JS之缓冲动画/"/>
 
 
 
 
 
-  <title> 原生JS速度动画 | lilin'blog </title>
+  <title> 原生JS之缓冲动画 | lilin'blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -326,7 +286,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="https://Iris-lilin.github.io/2017/06/24/原生JS之速度动画/">
+    <link itemprop="mainEntityOfPage" href="https://Iris-lilin.github.io/2017/06/25/原生JS之缓冲动画/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Iris-lilin">
@@ -347,7 +307,7 @@
             
             
               
-                原生JS速度动画
+                原生JS之缓冲动画
               
             
           </h1>
@@ -362,8 +322,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-24T19:11:26+08:00">
-                2017-06-24
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-25T10:38:06+08:00">
+                2017-06-25
               </time>
             
 
@@ -420,119 +380,41 @@
       
 
       
-        <h2 id="样式代码"><a href="#样式代码" class="headerlink" title="样式代码"></a>样式代码</h2><pre><code>body,div,span{
-    margin: 0;
-    padding: 0;
-}
-#div1{
-    width: 200px;
-    height: 200px;
-    background: red;
-    position: relative;  
-    left: -200px;
-    top:0;
-}
-
-#div1 span{
-    width: 50px;
-    height: 50px;
-    background: yellow;
-    position: absolute;
-    left: 200px;
-    top: 50px;
-}
-</code></pre><p>通过改变最左侧物体的left值实现动画</p>
-<p>当鼠标移入的的时候left值加大，移出时减小。</p>
-<pre><code>    window.onload=function(){
-    var obj=document.getElementById(&quot;div1&quot;);
-    obj.onmouseover=function(){
-        startMove();
-    }
-    obj.onmouseout=function(){
-        endMove();
-    }
-}
-</code></pre><p>具体实现代码如下</p>
-<pre><code>    function startMove(){
-    clearInterval(timer);
-    var obj=document.getElementById(&quot;div1&quot;);
-    timer=setInterval(function(){
-        if (obj.offsetLeft==0) {
-            clearInterval(timer);
-        }else{
-            obj.style.left=obj.offsetLeft+5+&quot;px&quot;;
-        }
-    },30)
-}
-function endMove(){
-    clearInterval(timer);
-    var obj=document.getElementById(&quot;div1&quot;);
-        timer=setInterval(function(){
-        if (obj.offsetLeft==-200) {
-            clearInterval(timer);
-        }else{
-            obj.style.left=obj.offsetLeft-5+&quot;px&quot;;
-        }
-    },30)
-}
-</code></pre><p>实现效果如图：</p>
-<p>初始化left=-200时<br><img src="https://ojlty2hua.qnssl.com/image-1498304589950-MXEuUE5H.PNG?imageView2/0/q/75|imageslim" width="400" height="150"></p>
-<p>当left&lt;0时一直增大left，图为left=0的情况</p>
-<p><img src="https://ojlty2hua.qnssl.com/image-1498305084232-MjIuUE5H.PNG?imageView2/0/q/75|imageslim" width="400" height="200"></p>
-<h2 id="遇到的坑"><a href="#遇到的坑" class="headerlink" title="遇到的坑"></a>遇到的坑</h2><ol>
-<li>每一次函数执行时都要先清除计时器，否则效果就是图片一直一闪一闪的改变left值</li>
-<li>适当选择计时器的间隔时间，否则效果达不到期望值</li>
-</ol>
-<h2 id="精简版代码"><a href="#精简版代码" class="headerlink" title="精简版代码"></a>精简版代码</h2><p>在两个代码相像的情况下，可以把相同部分提取出来，不同部分作为参数传进去，JS代码如下：</p>
-<pre><code>&lt;script type=&quot;text/javascript&quot;&gt;
+        <h2 id="缓冲动画"><a href="#缓冲动画" class="headerlink" title="缓冲动画"></a>缓冲动画</h2><p>&emsp;&emsp;当距离目的地很远时速度很大，随着距离的减小速度也减小，可以得到速度与距离成正比，假设目标值为target，当前值为obj.offsetLeft,则初步得到speed=target-obj.offsetLeft，测试发现，速度太快了，故speed=（target-obj.offsetLeft）/10；再次测试，发现宏观上好像达到了期望的效果，然而仔细观察打开控制太后发现结果却是这样的…<br><img src="https://ojlty2hua.qnssl.com/image-1498358595672-My5QTkc=.PNG?imageView2/0/q/75|imageslim"></p>
+<p><img src="https://ojlty2hua.qnssl.com/image-1498358653591-NC5QTkc=.PNG?imageView2/0/q/75|imageslim"><br>从上图可以看到，left值并不是期望的0px和200px,这是为什么呢？</p>
+<p><strong>原因</strong>：因为有除法，当offsetLeft值变的越来越小时，最后相除会使speed变成小数，比如0.75，比如这时div移动到了190，程序里写到div的left=obj.offsetLeft+speed+’px’,那么div的left就是190.75px,从而offsetLeft与speed相加会有小数，又因显示器的最小像素单位是1px，所以浏览器默认向下取整（变小，即floor），将小数省略，小数省略后，最终的值会就成了190，达不到200px.</p>
+<p><em>换句话说</em>：</p>
+<p>如果(目标值-当前值)/10  不能整除的话。运动到最后，是1~9之间的数字来除以10，结果是个小于1的小数，如果用Math.floor(speed)向下取整，那就是0，speed=0，意味着不再发生变化。也就是说，当速度大于0的时候，如果用Math.floor(speed),最后不到10个像素的时候，就不会动了。所以要用Math.ceil向上取整。同理，当速度&lt;0时，要用Math.ceil()取整。</p>
+<h2 id="JS代码"><a href="#JS代码" class="headerlink" title="JS代码"></a>JS代码</h2><pre><code>&lt;script type=&quot;text/javascript&quot;&gt;
 window.onload=function(){
     var obj=document.getElementById(&quot;div1&quot;);
     obj.onmouseover=function(){
-        move(0,10);
+        move(0);
     }
     obj.onmouseout=function(){
-        move(-200,-10);
+        move(-200);
     }
 }
 
     var timer=null;
-    function move(target,speed){
+    function move(target){
         clearInterval(timer);
         var obj=document.getElementById(&quot;div1&quot;);
         timer=setInterval(function(){
-        if (obj.offsetLeft==target) {
-            clearInterval(timer);
-        }else{
-            obj.style.left=obj.offsetLeft+speed+&quot;px&quot;;
-            }
-        },30)
+            var speed=(target-obj.offsetLeft)/20;
+            //speed=speed&lt;0?Math.floor(speed):Math.ceil(speed);
+            if (obj.offsetLeft==target) {
+                clearInterval(timer);
+             }else{
+                 obj.style.left=obj.offsetLeft+speed+&quot;px&quot;;
+             }
+         },30)
     }
-</code></pre><p>目前是传两个参数，而参数当然是越少越好，故再次精简如下：</p>
-<pre><code>var timer=null;
-function move(target){
-    clearInterval(timer);
-    var obj=document.getElementById(&quot;div1&quot;);
-    timer=setInterval(function(){
-        var speed=0;
-        if(obj.offsetLeft&lt;target){
-                speed=10;
-        }else{
-            speed=-10;
-        }
-        if (obj.offsetLeft==target) {
-            clearInterval(timer);
-         }else{
-             obj.style.left=obj.offsetLeft+speed+&quot;px&quot;;
-         }
-     },30)
-}
-</code></pre><p>##小结  ##</p>
-<ol>
-<li>明确分析出物体属于何种运动类型；</li>
-<li>实现匀速运动的关键点是采用定时器 setInnterval();</li>
-<li>清空定时器 clearInterval() 的使用；</li>
-<li>注意物体css需设置position，及left 、top，其是实现左、右、上、下运动必不可少的。<h2 id=""><a href="#" class="headerlink" title="#"></a>#</h2></li>
-</ol>
+</code></pre><p></p>
+<h2 id="最终效果图"><a href="#最终效果图" class="headerlink" title="最终效果图"></a>最终效果图</h2><p><img src="https://ojlty2hua.qnssl.com/image-1498359428806-MS5QTkc=.PNG?imageView2/0/q/75|imageslim"><br><img src="https://ojlty2hua.qnssl.com/image-1498359463831-Mi5QTkc=.PNG?imageView2/0/q/75|imageslim"></p>
+<h2 id="切记"><a href="#切记" class="headerlink" title="切记"></a>切记</h2><p>凡是运动的速度一定要取整，否则就会出错</p>
+<p>当speed&gt;0向上取整，当speed&lt;0向下取整</p>
+<p>在每次移动开始前一定要使用clearInterval清除定时器。</p>
 
       
     </div>
@@ -556,7 +438,7 @@ function move(target){
       
         <div class="post-tags">
           
-            <a href="/tags/study/" rel="tag"># study</a>
+            <a href="/tags/缓冲动画-取整/" rel="tag"># 缓冲动画 取整</a>
           
         </div>
       
@@ -569,8 +451,8 @@ function move(target){
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/06/22/AJAX/" rel="next" title="ajax入门篇">
-                <i class="fa fa-chevron-left"></i> ajax入门篇
+              <a href="/2017/06/24/原生JS之透明度动画/" rel="next" title="原生JS之透明度动画">
+                <i class="fa fa-chevron-left"></i> 原生JS之透明度动画
               </a>
             
           </div>
@@ -578,10 +460,6 @@ function move(target){
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/06/24/原生JS之透明度动画/" rel="prev" title="原生JS之透明度动画">
-                原生JS之透明度动画 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -735,7 +613,7 @@ function move(target){
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#样式代码"><span class="nav-number">1.</span> <span class="nav-text">样式代码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#遇到的坑"><span class="nav-number">2.</span> <span class="nav-text">遇到的坑</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#精简版代码"><span class="nav-number">3.</span> <span class="nav-text">精简版代码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#"><span class="nav-number">4.</span> <span class="nav-text">#</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#缓冲动画"><span class="nav-number">1.</span> <span class="nav-text">缓冲动画</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#JS代码"><span class="nav-number">2.</span> <span class="nav-text">JS代码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#最终效果图"><span class="nav-number">3.</span> <span class="nav-text">最终效果图</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#切记"><span class="nav-number">4.</span> <span class="nav-text">切记</span></a></li></ol></div>
             
 
           </div>
