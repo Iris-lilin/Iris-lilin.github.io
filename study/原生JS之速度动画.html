@@ -73,7 +73,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content=",,,,," />
 
 
 
@@ -89,15 +89,61 @@
 
 
 
-<meta name="description" content="learn more">
+<meta name="description" content="样式代码body,div,span{
+    margin: 0;
+    padding: 0;
+}
+#div1{
+    width: 200px;
+    height: 200px;
+    background: red;
+    position: relative;  
+    left: -200px;
+    top:0;
+}
+
+#div1 span{
+    width: 50">
 <meta property="og:type" content="website">
-<meta property="og:title" content="lilin'blog">
-<meta property="og:url" content="https://Iris-lilin.github.io/tags/缓冲动画-取整/index.html">
+<meta property="og:title" content="原生JS速度动画">
+<meta property="og:url" content="https://Iris-lilin.github.io/study/原生JS之速度动画.html">
 <meta property="og:site_name" content="lilin'blog">
-<meta property="og:description" content="learn more">
+<meta property="og:description" content="样式代码body,div,span{
+    margin: 0;
+    padding: 0;
+}
+#div1{
+    width: 200px;
+    height: 200px;
+    background: red;
+    position: relative;  
+    left: -200px;
+    top:0;
+}
+
+#div1 span{
+    width: 50">
+<meta property="og:image" content="https://ojlty2hua.qnssl.com/image-1498304589950-MXEuUE5H.PNG?imageView2/0/q/75|imageslim">
+<meta property="og:image" content="https://ojlty2hua.qnssl.com/image-1498305084232-MjIuUE5H.PNG?imageView2/0/q/75|imageslim">
+<meta property="og:updated_time" content="2017-06-24T14:01:44.603Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="lilin'blog">
-<meta name="twitter:description" content="learn more">
+<meta name="twitter:title" content="原生JS速度动画">
+<meta name="twitter:description" content="样式代码body,div,span{
+    margin: 0;
+    padding: 0;
+}
+#div1{
+    width: 200px;
+    height: 200px;
+    background: red;
+    position: relative;  
+    left: -200px;
+    top:0;
+}
+
+#div1 span{
+    width: 50">
+<meta name="twitter:image" content="https://ojlty2hua.qnssl.com/image-1498304589950-MXEuUE5H.PNG?imageView2/0/q/75|imageslim">
 
 
 
@@ -125,13 +171,19 @@
 
 
 
-  <link rel="canonical" href="https://Iris-lilin.github.io/tags/缓冲动画-取整/"/>
+  <link rel="canonical" href="https://Iris-lilin.github.io/study/原生JS之速度动画.html"/>
 
 
 
 
 
-  <title> 标签: 缓冲动画 取整 | lilin'blog </title>
+  <title>
+  
+
+  
+    原生JS速度动画 | lilin'blog
+  
+</title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -270,46 +322,133 @@
           <div id="content" class="content">
             
 
-  <div id="posts" class="posts-collapse">
-    <div class="collection-title">
-      <h2 >
-        缓冲动画 取整
-        <small>标签</small>
-      </h2>
-    </div>
+  <div id="posts" class="posts-expand">
+  <header class="post-header">
+
+	<h1 class="post-title" itemprop="name headline">原生JS速度动画</h1>
+
+
+
+</header>
 
     
-      
+    
+      <h2 id="样式代码"><a href="#样式代码" class="headerlink" title="样式代码"></a>样式代码</h2><pre><code>body,div,span{
+    margin: 0;
+    padding: 0;
+}
+#div1{
+    width: 200px;
+    height: 200px;
+    background: red;
+    position: relative;  
+    left: -200px;
+    top:0;
+}
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+#div1 span{
+    width: 50px;
+    height: 50px;
+    background: yellow;
+    position: absolute;
+    left: 200px;
+    top: 50px;
+}
+</code></pre><p>通过改变最左侧物体的left值实现动画</p>
+<p>当鼠标移入的的时候left值加大，移出时减小。</p>
+<pre><code>    window.onload=function(){
+    var obj=document.getElementById(&quot;div1&quot;);
+    obj.onmouseover=function(){
+        startMove();
+    }
+    obj.onmouseout=function(){
+        endMove();
+    }
+}
+</code></pre><p>具体实现代码如下</p>
+<pre><code>    function startMove(){
+    clearInterval(timer);
+    var obj=document.getElementById(&quot;div1&quot;);
+    timer=setInterval(function(){
+        if (obj.offsetLeft==0) {
+            clearInterval(timer);
+        }else{
+            obj.style.left=obj.offsetLeft+5+&quot;px&quot;;
+        }
+    },30)
+}
+function endMove(){
+    clearInterval(timer);
+    var obj=document.getElementById(&quot;div1&quot;);
+        timer=setInterval(function(){
+        if (obj.offsetLeft==-200) {
+            clearInterval(timer);
+        }else{
+            obj.style.left=obj.offsetLeft-5+&quot;px&quot;;
+        }
+    },30)
+}
+</code></pre><p>实现效果如图：</p>
+<p>初始化left=-200时<br><img src="https://ojlty2hua.qnssl.com/image-1498304589950-MXEuUE5H.PNG?imageView2/0/q/75|imageslim" width="400" height="150"></p>
+<p>当left&lt;0时一直增大left，图为left=0的情况</p>
+<p><img src="https://ojlty2hua.qnssl.com/image-1498305084232-MjIuUE5H.PNG?imageView2/0/q/75|imageslim" width="400" height="200"></p>
+<h2 id="遇到的坑"><a href="#遇到的坑" class="headerlink" title="遇到的坑"></a>遇到的坑</h2><ol>
+<li>每一次函数执行时都要先清除计时器，否则效果就是图片一直一闪一闪的改变left值</li>
+<li>适当选择计时器的间隔时间，否则效果达不到期望值</li>
+</ol>
+<h2 id="精简版代码"><a href="#精简版代码" class="headerlink" title="精简版代码"></a>精简版代码</h2><p>在两个代码相像的情况下，可以把相同部分提取出来，不同部分作为参数传进去，JS代码如下：</p>
+<pre><code>&lt;script type=&quot;text/javascript&quot;&gt;
+window.onload=function(){
+    var obj=document.getElementById(&quot;div1&quot;);
+    obj.onmouseover=function(){
+        move(0,10);
+    }
+    obj.onmouseout=function(){
+        move(-200,-10);
+    }
+}
 
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2017/06/25/原生JS之缓冲动画/" itemprop="url">
-              
-                <span itemprop="name">原生JS之缓冲动画</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-06-25T10:38:06+08:00"
-              content="2017-06-25" >
-          06-25
-        </time>
-      </div>
-
-    </header>
-  </article>
-
+    var timer=null;
+    function move(target,speed){
+        clearInterval(timer);
+        var obj=document.getElementById(&quot;div1&quot;);
+        timer=setInterval(function(){
+        if (obj.offsetLeft==target) {
+            clearInterval(timer);
+        }else{
+            obj.style.left=obj.offsetLeft+speed+&quot;px&quot;;
+            }
+        },30)
+    }
+</code></pre><p>目前是传两个参数，而参数当然是越少越好，故再次精简如下：</p>
+<pre><code>var timer=null;
+function move(target){
+    clearInterval(timer);
+    var obj=document.getElementById(&quot;div1&quot;);
+    timer=setInterval(function(){
+        var speed=0;
+        if(obj.offsetLeft&lt;target){
+                speed=10;
+        }else{
+            speed=-10;
+        }
+        if (obj.offsetLeft==target) {
+            clearInterval(timer);
+         }else{
+             obj.style.left=obj.offsetLeft+speed+&quot;px&quot;;
+         }
+     },30)
+}
+</code></pre><p>##小结  ##</p>
+<ol>
+<li>明确分析出物体属于何种运动类型；</li>
+<li>实现匀速运动的关键点是采用定时器 setInnterval();</li>
+<li>清空定时器 clearInterval() 的使用；</li>
+<li>注意物体css需设置position，及left 、top，其是实现左、右、上、下运动必不可少的。<h2 id=""><a href="#" class="headerlink" title="#"></a>#</h2></li>
+</ol>
 
     
   </div>
-
-  
 
           
           </div>
@@ -317,6 +456,10 @@
 
 
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
         
@@ -352,7 +495,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/">
-                <span class="site-state-item-count">8</span>
+                <span class="site-state-item-count">4</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>

@@ -73,7 +73,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content=",,,,,,,,,,,,,," />
 
 
 
@@ -89,15 +89,43 @@
 
 
 
-<meta name="description" content="learn more">
+<meta name="description" content="动画效果          &amp;emsp; &amp;emsp;&amp;emsp;&amp;emsp;元素原始透明度为30，当鼠标移入时利用定时器增加到100，移出时变为初始状态。
+css样式代码&amp;lt;style type=&amp;quot;text/css&amp;quot;&amp;gt;
+*{
+    margin: 0;
+    padding: 0;
+}
+#div1{
+    width: 200px;
+    height: 2">
 <meta property="og:type" content="website">
-<meta property="og:title" content="lilin'blog">
-<meta property="og:url" content="https://Iris-lilin.github.io/tags/JQuery-选择器/index.html">
+<meta property="og:title" content="原生JS之透明度动画">
+<meta property="og:url" content="https://Iris-lilin.github.io/study/原生JS之透明度动画.html">
 <meta property="og:site_name" content="lilin'blog">
-<meta property="og:description" content="learn more">
+<meta property="og:description" content="动画效果          &amp;emsp; &amp;emsp;&amp;emsp;&amp;emsp;元素原始透明度为30，当鼠标移入时利用定时器增加到100，移出时变为初始状态。
+css样式代码&amp;lt;style type=&amp;quot;text/css&amp;quot;&amp;gt;
+*{
+    margin: 0;
+    padding: 0;
+}
+#div1{
+    width: 200px;
+    height: 2">
+<meta property="og:image" content="https://ojlty2hua.qnssl.com/image-1498314645179-5LuWMS5QTkc=.PNG?imageView2/0/q/75|imageslim">
+<meta property="og:image" content="https://ojlty2hua.qnssl.com/image-1498314699913-MjIuUE5H.PNG?imageView2/0/q/75|imageslim">
+<meta property="og:updated_time" content="2017-06-25T03:07:22.701Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="lilin'blog">
-<meta name="twitter:description" content="learn more">
+<meta name="twitter:title" content="原生JS之透明度动画">
+<meta name="twitter:description" content="动画效果          &amp;emsp; &amp;emsp;&amp;emsp;&amp;emsp;元素原始透明度为30，当鼠标移入时利用定时器增加到100，移出时变为初始状态。
+css样式代码&amp;lt;style type=&amp;quot;text/css&amp;quot;&amp;gt;
+*{
+    margin: 0;
+    padding: 0;
+}
+#div1{
+    width: 200px;
+    height: 2">
+<meta name="twitter:image" content="https://ojlty2hua.qnssl.com/image-1498314645179-5LuWMS5QTkc=.PNG?imageView2/0/q/75|imageslim">
 
 
 
@@ -125,13 +153,19 @@
 
 
 
-  <link rel="canonical" href="https://Iris-lilin.github.io/tags/JQuery-选择器/"/>
+  <link rel="canonical" href="https://Iris-lilin.github.io/study/原生JS之透明度动画.html"/>
 
 
 
 
 
-  <title> 标签: JQuery 选择器 | lilin'blog </title>
+  <title>
+  
+
+  
+    原生JS之透明度动画 | lilin'blog
+  
+</title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -270,46 +304,69 @@
           <div id="content" class="content">
             
 
-  <div id="posts" class="posts-collapse">
-    <div class="collection-title">
-      <h2 >
-        JQuery 选择器
-        <small>标签</small>
-      </h2>
-    </div>
+  <div id="posts" class="posts-expand">
+  <header class="post-header">
+
+	<h1 class="post-title" itemprop="name headline">原生JS之透明度动画</h1>
+
+
+
+</header>
 
     
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2017/06/10/JQuery之选择器篇-一/" itemprop="url">
-              
-                <span itemprop="name">JQuery之选择器篇(一)</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-06-10T11:25:52+08:00"
-              content="2017-06-10" >
-          06-10
-        </time>
-      </div>
-
-    </header>
-  </article>
-
+    
+      <h2 id="动画效果"><a href="#动画效果" class="headerlink" title="动画效果"></a>动画效果</h2><p><div align="center"><br><img src="https://ojlty2hua.qnssl.com/image-1498314645179-5LuWMS5QTkc=.PNG?imageView2/0/q/75|imageslim" height="250px" width="250px">          &emsp; &emsp;&emsp;&emsp;<br><img src="https://ojlty2hua.qnssl.com/image-1498314699913-MjIuUE5H.PNG?imageView2/0/q/75|imageslim" height="250px" width="250px"><br></div><br>元素原始透明度为30，当鼠标移入时利用定时器增加到100，移出时变为初始状态。</p>
+<h2 id="css样式代码"><a href="#css样式代码" class="headerlink" title="css样式代码"></a>css样式代码</h2><pre><code>&lt;style type=&quot;text/css&quot;&gt;
+*{
+    margin: 0;
+    padding: 0;
+}
+#div1{
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    filter: alpha(opacity:30);  //IE浏览器满值为100
+    opacity: 0.3;  //火狐、谷歌满值为1
+}
+&lt;/style&gt;
+</code></pre><h2 id="JS代码"><a href="#JS代码" class="headerlink" title="JS代码"></a>JS代码</h2><pre><code>window.onload=function(){
+    var obj=document.getElementById(&quot;div1&quot;);
+    obj.onmouseover=function(){
+    move(100);
+    }
+    obj.onmouseout=function(){
+    move(30);
+    }
+}
+var alpha=30;   //将当前透明度放在变量里和目标值比较
+var timer=null;
+function move(target){
+    var obj=document.getElementById(&quot;div1&quot;);
+    clearInterval(timer); //清除计时器，防止计时器叠加
+    timer=setInterval(function(){
+        var speed=0;
+        if(alpha&gt;target){
+        speed= -10;
+        }else{
+            speed= 10;
+        }
+        if(alpha==target){
+            clearInterval(timer);
+        }
+        else{
+            alpha+=speed;
+            obj.style.filter=&apos;alpha(opacity:&apos;+alpha+&apos;)&apos;;
+            obj.style.opacity=alpha/100;  
+        }
+    },30)
+}
+</code></pre><h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><ol>
+<li>浏览器兼容问题</li>
+<li>没有的属性就可以封装在变量里，方便比较</li>
+</ol>
 
     
   </div>
-
-  
 
           
           </div>
@@ -317,6 +374,10 @@
 
 
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
         
@@ -352,7 +413,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/">
-                <span class="site-state-item-count">8</span>
+                <span class="site-state-item-count">4</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
