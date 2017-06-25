@@ -89,31 +89,37 @@
 
 
 
-<meta name="description" content="初始代码仿照简单动画写的多物体运动的代码如下
+<meta name="description" content="本节分别从速度动画和透明度动画两个方面讲多物体动画
+速度初始代码仿照简单动画写的多物体运动的代码如下
 &amp;lt;script type=&amp;quot;text/javascript&amp;quot;&amp;gt;
 window.onload=function(){
     var obj=document.getElementsByTagName(&amp;quot;div&amp;quot;);
-    for(var i=0;i&amp;lt;obj.length;i++){">
+    for(var i=0">
 <meta property="og:type" content="article">
 <meta property="og:title" content="原生JS之多物体运动速度篇">
 <meta property="og:url" content="https://Iris-lilin.github.io/2017/06/25/原生JS之多物体运动/index.html">
 <meta property="og:site_name" content="lilin'blog">
-<meta property="og:description" content="初始代码仿照简单动画写的多物体运动的代码如下
+<meta property="og:description" content="本节分别从速度动画和透明度动画两个方面讲多物体动画
+速度初始代码仿照简单动画写的多物体运动的代码如下
 &amp;lt;script type=&amp;quot;text/javascript&amp;quot;&amp;gt;
 window.onload=function(){
     var obj=document.getElementsByTagName(&amp;quot;div&amp;quot;);
-    for(var i=0;i&amp;lt;obj.length;i++){">
+    for(var i=0">
 <meta property="og:image" content="https://ojlty2hua.qnssl.com/image-1498384198952-MTEuUE5H.PNG?imageView2/0/q/75|imageslim">
 <meta property="og:image" content="https://ojlty2hua.qnssl.com/image-1498384241763-MS5QTkc=.PNG?imageView2/0/q/75|imageslim">
 <meta property="og:image" content="https://ojlty2hua.qnssl.com/image-1498384712292-MTExLlBORw==.PNG?imageView2/0/q/75|imageslim">
-<meta property="og:updated_time" content="2017-06-25T09:59:30.798Z">
+<meta property="og:image" content="https://ojlty2hua.qnssl.com/image-1498394009369-MjIuUE5H.PNG?imageView2/0/q/75|imageslim">
+<meta property="og:image" content="https://ojlty2hua.qnssl.com/image-1498393931022-Mi5QTkc=.PNG?imageView2/0/q/75|imageslim">
+<meta property="og:image" content="https://ojlty2hua.qnssl.com/image-1498394196557-MjIyLlBORw==.PNG?imageView2/0/q/75|imageslim">
+<meta property="og:updated_time" content="2017-06-25T12:40:27.884Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="原生JS之多物体运动速度篇">
-<meta name="twitter:description" content="初始代码仿照简单动画写的多物体运动的代码如下
+<meta name="twitter:description" content="本节分别从速度动画和透明度动画两个方面讲多物体动画
+速度初始代码仿照简单动画写的多物体运动的代码如下
 &amp;lt;script type=&amp;quot;text/javascript&amp;quot;&amp;gt;
 window.onload=function(){
     var obj=document.getElementsByTagName(&amp;quot;div&amp;quot;);
-    for(var i=0;i&amp;lt;obj.length;i++){">
+    for(var i=0">
 <meta name="twitter:image" content="https://ojlty2hua.qnssl.com/image-1498384198952-MTEuUE5H.PNG?imageView2/0/q/75|imageslim">
 
 
@@ -401,7 +407,8 @@ window.onload=function(){
       
 
       
-        <h2 id="初始代码"><a href="#初始代码" class="headerlink" title="初始代码"></a>初始代码</h2><p>仿照简单动画写的多物体运动的代码如下</p>
+        <p><strong>本节分别从速度动画和透明度动画两个方面讲多物体动画</strong></p>
+<h2 id="速度初始代码"><a href="#速度初始代码" class="headerlink" title="速度初始代码"></a>速度初始代码</h2><p>仿照简单动画写的多物体运动的代码如下</p>
 <pre><code>&lt;script type=&quot;text/javascript&quot;&gt;
 window.onload=function(){
     var obj=document.getElementsByTagName(&quot;div&quot;);
@@ -434,7 +441,7 @@ window.onload=function(){
 <p><em>原因：</em><br>整个程序就一个定时器, 比如第一个div开始动了，第二个div 鼠标移入了 前一个定时器就被干掉了，那么自然就卡在那里了。<br>所以最大的问题就是整个程序就只有一个定时器。那么怎么解决这个问题呢？</p>
 <p>&emsp;&emsp;其实很简单，把定时器作为一个物体的属性加上,那么每个物体都有一个定时器在，当关闭定时器的时候是关闭物体上的定时器,开也是物体上的定时器</p>
 <p>那么他们之间就可以完全互不干扰的运行。</p>
-<h2 id="改进代码"><a href="#改进代码" class="headerlink" title="改进代码"></a>改进代码</h2><pre><code>function move(obj,target){
+<h2 id="速度改进代码"><a href="#速度改进代码" class="headerlink" title="速度改进代码"></a>速度改进代码</h2><pre><code>function move(obj,target){
     clearInterval(obj.timer);
     obj.timer=setInterval(function(){
         var speed=(target-obj.offsetWidth)/8;
@@ -447,6 +454,74 @@ window.onload=function(){
      },30)
 }
 </code></pre><p>这样就能达到我们期望的效果了，如图：<br><img src="https://ojlty2hua.qnssl.com/image-1498384712292-MTExLlBORw==.PNG?imageView2/0/q/75|imageslim"></p>
+<h2 id="透明度初始代码"><a href="#透明度初始代码" class="headerlink" title="透明度初始代码"></a>透明度初始代码</h2><p>仿照简单物体透明度动画写的多物体运动的代码如下</p>
+<pre><code>&lt;script type=&quot;text/javascript&quot;&gt;
+window.onload=function(){
+    var obj=document.getElementsByTagName(&quot;div&quot;);
+    for(var i=0;i&lt;obj.length;i++){
+        obj[i].onmouseover=function(){
+        move(this,100);
+        }
+        obj[i].onmouseout=function(){
+        move(this,30);
+        }
+    }
+}
+
+    var alpha=30;
+    function move(obj,target){
+        clearInterval(obj.timer);
+        obj.timer=setInterval(function(){
+            if (target&gt;alpha) {
+                speed=10;
+            }else{
+                speed=-10;
+            }
+            if (alpha==target) {
+                obj.clearInterval(timer);
+             }else{
+                 alpha+=speed;
+                 obj.style.filter=&quot;alpha(opacity&quot;+alpha+&quot;)&quot;;
+                 obj.style.opacity=alpha/100;
+             }
+         },30)
+    }
+ &lt;/script&gt;
+</code></pre><p><em>效果图</em><br><img src="https://ojlty2hua.qnssl.com/image-1498394009369-MjIuUE5H.PNG?imageView2/0/q/75|imageslim"><br><img src="https://ojlty2hua.qnssl.com/image-1498393931022-Mi5QTkc=.PNG?imageView2/0/q/75|imageslim"><br>遇到的问题和速度动画一样，解决方法也是，所以直接贴代码</p>
+<pre><code>&lt;script type=&quot;text/javascript&quot;&gt;
+window.onload=function(){
+var obj=document.getElementsByTagName(&quot;div&quot;);
+for(var i=0;i&lt;obj.length;i++){
+    obj[i].alpha=30;
+    obj[i].onmouseover=function(){
+    move(this,100);
+    }
+    obj[i].onmouseout=function(){
+    move(this,30);
+    }
+}
+}
+function move(obj,target){
+    clearInterval(obj.timer);
+    obj.timer=setInterval(function(){
+        if (target&gt;obj.alpha) {
+            speed=10;
+        }else{
+            speed=-10;
+        }
+        if (obj.alpha==target) {
+            obj.clearInterval(timer);
+         }else{
+             obj.alpha+=speed;
+             obj.style.filter=&quot;alpha(opacity&quot;+obj.alpha+&quot;)&quot;;
+             obj.style.opacity=obj.alpha/100;
+         }
+     },30)
+}
+&lt;/script&gt;
+</code></pre><p><em>效果图</em><br><img src="https://ojlty2hua.qnssl.com/image-1498394196557-MjIyLlBORw==.PNG?imageView2/0/q/75|imageslim"></p>
+<h2 id="经验小结"><a href="#经验小结" class="headerlink" title="经验小结"></a>经验小结</h2><p>只要是多物体运动，所有的东西都不能公用</p>
+<p>像timer一样定义一下，每一个obj都定义自己本身的alpha，就不会去争用一个属性了。</p>
 
       
     </div>
@@ -645,7 +720,7 @@ window.onload=function(){
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#初始代码"><span class="nav-number">1.</span> <span class="nav-text">初始代码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#改进代码"><span class="nav-number">2.</span> <span class="nav-text">改进代码</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#速度初始代码"><span class="nav-number">1.</span> <span class="nav-text">速度初始代码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#速度改进代码"><span class="nav-number">2.</span> <span class="nav-text">速度改进代码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#透明度初始代码"><span class="nav-number">3.</span> <span class="nav-text">透明度初始代码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#经验小结"><span class="nav-number">4.</span> <span class="nav-text">经验小结</span></a></li></ol></div>
             
 
           </div>
